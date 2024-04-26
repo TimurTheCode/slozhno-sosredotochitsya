@@ -201,7 +201,7 @@ h4.subtitle {
   margin-block-end: 20px;
 }
 
-.main_link { 
+.main_link {
   text-shadow: 2px 2px 0 var(--accent-color);
   line-height: normal;
   text-decoration: none;
@@ -212,7 +212,7 @@ h4.subtitle {
 }
 
 .main_link:focus,
-.main_link:focus-visible{
+.main_link:focus-visible {
   outline: 1px solid var(--main-text-color);
   
 }
