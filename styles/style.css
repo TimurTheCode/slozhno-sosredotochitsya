@@ -1,5 +1,402 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  color: var(--main-text-color);
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  background-image: var(--cover-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  min-height: 668px;
+  margin-block-end: 40px;
+  padding: 10px;
+  block-size: 100vh;
+  inline-size: 100%;
+}
+
+.cover {
+  display: grid;
+  padding: 10px;
+  min-block-size: 100vh;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+
+
+.decorated-zone::before {
+  top: 10px;
+  right: 10px;
+  border-inline-end: 1px solid var(--main-color);
+  border-block-start: 1px solid var(--main-color);
+}
+
+.decorated-zone::after {
+  bottom: 10px;
+  left: 10px;
+  border-inline-start: 1px solid var(--main-color);
+  border-block-end: 1px solid var(--main-color);
+  
+}
+
+.rec_decor {
+  font-size: var(--main-fs);
+  line-height: 24px;
+  position: absolute;
+  top: 11px;
+  right: 18px;
+  display: var(--rec-display);
+  color: var(--accent-color);
+  
+}
+
+.rec_decor::before {
+  visibility: visible;
+}
+
+.rec_decor::after {
+  content: "";
+  display: inline-block;
+  margin-inline-start: 10px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  filter: drop-shadow(0px 0px 4px var(--main-color));
+  inline-size: 12px;
+  block-size: 12px;
+}
+
+.header__theme-menu {
+  align-self: center;
+  color: var(--main-color);
+  font-size: var(--main-fs);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  flex-wrap: wrap;
+  align-self: end;
+  font-weight: var(--regular-fw);
+  line-height: 100%;
+  text-align: center;
+}
+
+.header__theme-menu-button {
+  min-width: 70px;
+  min-height: 26px;
+  font-weight: var(--regular-fw);
+  font-size: var(--main-fs);
+  line-height: 100%;
+  text-align: center;
+  text-transform: lowercase;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--main-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--main-color);
+  outline: none;
+}
+
+.header__theme-menu-button_type_light {
+  border: var(--border-day) solid var(--main-color);
+}
+
+.header__theme-menu-button_active:active {
+  outline: 1px solid var(--main-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button_type_auto {
+  border: var(--border-auto) solid var(--main-color);
+}
+
+.header__theme-menu-button_type_dark {
+  border: var(--border-neon) solid var(--main-color);
+}
+
+.header_title {
+  color: var(--title-color);
+  font-weight: var(--bold-fw);
+  font-size: var(--fs-mob);
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header_text {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.header_content {
+  grid-column: 2/3;
+  align-self: center;
+  height: fit-content;
+  color: var(--subtitle-color);
+  font-weight: var(--bold-fw);
+  font-size: var(--main-fs);
+  line-height: 130%;
+  background-color: var(--supp-bg);
+}
+
+
+.main {
+  margin: 0;
+  padding-inline: 10px;
+}
+
+.main_descr {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-block-end: 30px;
+}
+
+.main_decor {
+  font-family: var(--font-family);
+  font-weight: var(--regular-fw);
+  font-size: var(--main-fs);
+  line-height: 130%;
+}
+
+.main_decor > .subtitle:first-child {
+  margin-block-end: 20px;
+}
+
+.subtitle {
+  color: var(--subtitle-color);
+  font-weight: var(--bold-fw);
+  font-size: var(--main-fs);
+  line-height: 130%;
+  background-color: var(--supp-bg);
+}
+
+h4.subtitle {
+  font-weight: var(--regular-fw);
+}
+
+.text {
+  margin-block-start: 10px;
+  margin-block-end: 20px;
+}
+
+.main_link { 
+  text-shadow: 2px 2px 0 var(--accent-color);
+  line-height: normal;
+  text-decoration: none;
+}
+
+.main_link:hover {
+  border-block-end: 1px solid var(--main-text-color);
+}
+
+.main_link:focus,
+.main_link:focus-visible{
+  outline: 1px solid var(--main-text-color);
+  
+}
+
+.main-size {
+  margin-block-end: 30px;
+}
+
+.main_descr-question {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.main_descr-question .title {
+  margin-block-end: 20px;
+}
+
+.title {
+  margin-block-end: 20px;
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: var(--main-fs);
+  line-height: 130%;
+}
+
+.main_card-margin {
+  margin-block-end: 20px;
+}
+
+.main_card {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.picture_section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-block-start: 10px;
+}
+
+.picture {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.sunset {
+  grid-area: sunset;
+}
+
+.ice-cream {
+  grid-area: ice-cream;
+}
+
+.tape {
+  grid-area: tape;
+}
+
+.books {
+  grid-area: books;
+}
+
+.street {
+  grid-area: street;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 40px;
+  padding: 10px;
+  block-size: 100vh;
+  min-height: 668px;
+}
+
+.footer_title {
+  color: var(--title-color);
+    font-size: var(--fs-mob);
+    text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media (min-width: 768px) {
+
+  .rec_decor {
+      top: 21px;
+      right: 28px;
+  }
+
+  .header {
+      padding: 20px;
+      margin-block-end: 60px;
+  }
+
+  .header_text {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header_title {
+      margin-inline-start: -20px;
+      font-size: var(--fs-desk);
+  }
+
+  .decorated-zone::before {
+      top: 20px;
+      right: 20px;
+  }
+
+  .decorated-zone::after {
+      bottom: 20px;
+      left: 20px;
+  }
+
+  .main {
+      padding-inline: 20px;
+  }
+
+  .main_descr {
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      margin-block-end: 60px;
+  }
+
+  .main_descr-question {
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main_size {
+      margin-block-end: 60px;
+  }
+
+  .picture_section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street";
+      gap: 20px;
+      margin-block-start: 20px;
+  }
+  .footer_title {
+      font-size: var(--fs-desk);
+  }
+  .footer {
+      padding: 20px;
+      margin-block-start: 60px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .header_title {
+      text-shadow: 4px 4px 0 #ff0070;
+  }
+
+  .header__theme-menu {
+      align-self: flex-start;
+  }
+
+  .header__theme-menu-list {
+      flex-direction: row;
+  }
+
+  .main_card {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+  }
+
+  .main_descr {
+      gap: 10px;
+  }
+
+  .footer_title {
+      text-shadow: 4px 4px 0 #ff0070;
+  }
+
+  .rec_decor {
+    top: 23px;
+    right:27px;
+  }
 }
