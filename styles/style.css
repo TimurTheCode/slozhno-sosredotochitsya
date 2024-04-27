@@ -106,7 +106,9 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--main-color);
+  outline: 1px solid var(--btn-hover-color);
+ 
+  
 }
 
 .header__theme-menu-button:focus-visible {
