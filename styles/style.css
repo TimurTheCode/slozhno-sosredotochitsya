@@ -209,7 +209,7 @@ h4.subtitle {
   outline: 1px solid var(--main-text-color);
 }
 
-.main-marg {
+.main_marg {
   margin-block-end: 30px;
 }
 
@@ -383,7 +383,7 @@ h4.subtitle {
     gap: 10px;
   }
 
-  .main-marg {
+  .main_marg {
     margin-block-end: 60px;
   }
 
