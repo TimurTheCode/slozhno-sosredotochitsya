@@ -20,7 +20,7 @@
   --rec-display: block;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --title-color: #db00ff;
     --subtitle-color: #000028;
@@ -42,4 +42,4 @@
     --fs-desk: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     --rec-display: block;
   }
-}
+} */
