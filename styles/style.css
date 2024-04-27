@@ -217,8 +217,8 @@ h4.subtitle {
   
 }
 
-.main-size {
-  margin-block-end: 30px;
+.main-marg {
+  margin-block-end: 60px;
 }
 
 .main_descr-question {
@@ -390,6 +390,10 @@ h4.subtitle {
   .main_descr {
       gap: 10px;
   }
+
+  /* .main-marg {
+    margin-block-end: 60px;
+  } */
 
   .footer_title {
       text-shadow: 4px 4px 0 #ff0070;
